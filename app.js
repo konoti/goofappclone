@@ -79,8 +79,8 @@ app.locals.marked = marked;
 if (app.get('env') == 'development') {
   app.use(errorHandler());
 }
-
-var token = 'SECRET_TOKEN_f8ed84e8f41e4146403dd4a6bbcea5e418d23a9';
+// Making ST Environmental Variable
+var token = '$Secrettoken';
 console.log('token: ' + token);
 
 http.createServer(app).listen(app.get('port'), function () {
